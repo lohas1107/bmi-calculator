@@ -2,6 +2,7 @@ develop:
 	docker build -t bmi-calculator-dev develop
 	docker run -it --rm \
 		--name bmi-calculator-dev \
+		-v $(HOME)/flutter:/flutter \
 		-v $(PWD):/bmi-calculator \
 		bmi-calculator-dev bash
 .PHONY: develop
